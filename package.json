@@ -1,0 +1,51 @@
+{
+    "name": "image-search-abstraction",
+    "version": "1.0.0",
+    "description": "Image Search Abstraction API",
+    "main": "index.js",
+    "engines": {
+        "node": "8.1.4"
+    },
+    "scripts": {
+        "start": "node ./start.js",
+        "test": "./node_modules/.bin/mocha ./test/routes/index",
+        "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
+        "watch": "nodemon ./start.js --ignore public/",
+        "assets": "webpack -w --display-max-modules 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/abhinavmall/image-search-abstraction.git"
+    },
+    "author": "Abhinav Mall",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/abhinavmall/image-search-abstraction/issues"
+    },
+    "homepage": "https://github.com/abhinavmall/image-search-abstraction#readme",
+    "dependencies": {
+        "connect-mongo": "^1.3.2",
+        "dotenv": "^4.0.0",
+        "express": "^4.15.3",
+        "express-session": "^1.15.1",
+        "google-ims": "^1.1.4",
+        "mocha": "2.2.4",
+        "mongoose": "^4.11.4",
+        "path": "^0.12.7",
+        "superagent": "^1.2.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "6.7.7",
+        "babel-core": "6.24.0",
+        "babel-loader": "6.4.0",
+        "babel-preset-es2015": "6.24.0",
+        "concurrently": "3.4.0",
+        "css-loader": "0.27.3",
+        "extract-text-webpack-plugin": "2.1.0",
+        "node-sass": "4.5.0",
+        "nodemon": "1.11.0",
+        "postcss-loader": "1.3.3",
+        "sass-loader": "6.0.3",
+        "webpack": "2.2.1"
+    }
+}
