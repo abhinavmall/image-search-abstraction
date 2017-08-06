@@ -9,6 +9,6 @@
 ## Example query usage:
 
 ```text
-https://image-search-98878.herokuapp.com/api/imagesearch/?offset=10
-https://image-search-98878.herokuapp.com/api/imagesearch/latest
+https://image-search-98878.herokuapp.com/api/imagesearch/cats?offset=10
+https://image-search-98878.herokuapp.com/api/latest
 ```
