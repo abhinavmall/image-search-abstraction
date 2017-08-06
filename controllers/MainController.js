@@ -8,9 +8,19 @@ exports.homepage = (req, res) => {
 
 exports.imageSearch = async (req, res) => {
     // Search and save result
-    var result = await SearchMethods.googleImageSearch(req.params.q, req.query.offset)
+    var result = await SearchMethods.googleImageSearch(req.params.q, req.query.offset);
+
     // Save query to db
+    const searchQuery = new SearchModel();
+    searchQuery.query = req.params.q;
+    await searchQuery.save();
 
     // Return results
-    res.json(result)
+    res.json(result);
+}
+
+exports.latestSearches = async (req, res) => {
+    //Fetch latest searches
+    var searches = await SearchMethods.getLatest();
+    res.json(searches);
 }
